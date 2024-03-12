@@ -1,0 +1,1052 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    width: 100%;
+    font-size: 62.5%;
+    line-height: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+}
+/* Phần header */
+header {
+    width: 100vw;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    padding: 10px 32px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.header_logo {
+    margin-right: auto;
+}
+header a img {
+    width: 220px;
+    height: 50px;
+}
+header #nav_menu {
+    display: flex;
+    align-items: center;
+}
+#mobile_menu {
+    padding: 15px;
+    display: none;
+}
+#mobile_menu button {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+}
+#mobile_menu button i {
+    font-size: 2rem;
+    color: #c82f35;
+}
+
+header #nav_menu ul {
+    list-style: none;
+    display: flex;
+}
+header #nav_menu ul li {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto 16px;
+}
+header #nav_menu ul li a {
+    margin: auto;
+    text-decoration: none;
+    color: #2b2b2b;
+}
+header nav ul li a:hover {
+    color: #c82f35 !important;
+}
+.header__seach {
+    margin: auto 16px;
+    font-size: 1.4rem;
+}
+.header__seach:hover {
+    cursor: pointer;
+}
+.header__button {
+    width: 150px;
+    height: 40px;
+    background-color: #c82f35;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    margin: auto;
+}
+.header__button:hover {
+    background-color: #b32a30;
+    cursor: pointer;
+}
+/* phần mobile Menu */
+.menu {
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    padding-left: 2%;
+    transition: 0.5s;
+    left: -100%;
+}
+.divao {
+    left: 0;
+}
+.menu .header_logo {
+    padding: 10px 0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #999;
+}
+.menu ul {
+    width: 100%;
+    list-style: none;
+}
+.menu ul li {
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 16px 0;
+    border-bottom: 1px solid #999;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #c82f35;
+}
+.menu button {
+    margin-top: 20px;
+    margin-left: 40%;
+}
+/* Phần main */
+main {
+    margin-top: 80px;
+    width: 100%;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+/* phần banner */
+.banner {
+    width: 100%;
+    height: 560px;
+    position: relative;
+}
+.slide_image {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+    text-align: center;
+}
+._1slide {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+._1slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner img {
+    width: 100%;
+    height: 560px;
+}
+.pre {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.8);
+    border: none;
+    z-index: 5;
+}
+.next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.8);
+    border: none;
+    z-index: 5;
+}
+.pre:hover,
+.next:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.banner ul {
+    display: flex;
+    position: absolute;
+    left: 200px;
+    bottom: 10px;
+}
+
+.banner ul li {
+    list-style: none;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 6px;
+    background: #d9d9d9;
+    opacity: 0.5;
+    text-indent: -999px;
+    transition: 0.4s;
+}
+
+.banner ul .here {
+    background: #fc8e27 !important;
+}
+.banner ul li:hover {
+    cursor: pointer;
+}
+._1slide.sangtrai {
+    animation: trans_to_left 0.6s ease-in-out forwards;
+}
+@keyframes trans_to_left {
+    0% {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        left: -100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+._1slide.phaidivao {
+    animation: phaidivao 0.6s ease-in-out forwards;
+}
+@keyframes phaidivao {
+    0% {
+        left: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+._1slide.sangphai {
+    animation: trans_to_right 0.6s ease-in-out forwards;
+}
+@keyframes trans_to_right {
+    0% {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+._1slide.traidivao {
+    animation: traidivao 0.6s ease-in-out forwards;
+}
+@keyframes traidivao {
+    0% {
+        left: -100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+/* phần khóa học */
+.list_course {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    height: 622px;
+    margin: 30px 0;
+    position: relative;
+    justify-content: center;
+}
+/* .list_course aside {
+    width: 192px;
+    height: 622px;
+    position: relative;
+} */
+.highlight_left img {
+    position: absolute;
+    bottom: 60px;
+    left: 16px;
+}
+.highlight_right img {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+}
+.course {
+    max-width: 1128px;
+    height: 622px;
+    display: flex;
+    flex-direction: column;
+}
+.course-icon {
+    display: flex;
+    width: 100%;
+    height: 24px;
+    margin: 15px auto;
+    justify-content: center;
+}
+.course-icon img {
+    height: 24px;
+}
+.course-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.course-title a {
+    text-decoration: none;
+}
+.course-title h1 {
+
+    font-size: 30px;
+    font-weight: 900;
+    color: #c82f35;
+    line-height: 32px;
+}
+.course-title h1:hover {
+    animation: Fadein 0.2s forwards;
+}
+@keyframes Fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+.course-list {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    margin: 15px auto;
+    justify-content: center;
+}
+.course-item{
+    font-size: 1.4rem;
+    padding: 8px 0;
+    margin: 0 15px;
+    line-height: 1.4;
+}
+.course-item:hover {
+    cursor: pointer;
+    animation: growth forwards 0.6s;
+}
+@keyframes growth {
+    0% {
+        color: #c82f35;
+        border-bottom: none; 
+    }
+    50% {
+        border-bottom: 1px solid #c82f35;
+        color: #c82f35;
+    }
+    100% {
+        border-bottom: 2px solid #c82f35;
+        color: #c82f35;
+    }
+}
+.select {
+    border-bottom: 2px solid #c82f35 !important;
+    color: #c82f35 !important;
+}
+/* phần hiển thị khóa học */
+.lession {
+    position: relative;
+    height: 486px;
+    width: 1128px;
+}
+.develop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 486px;
+    width: 1128px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+}
+.display {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.course-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.course-lession {
+    display: flex;
+    width: 266px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d7d7d7;
+    margin: 0 11px;
+}
+.course-lession:hover {
+    animation: Fadein 0.2s forwards;
+}
+.course-lession a {
+    text-decoration: none;
+}
+.course-lession-img {
+    width: 266px;
+    height: 280px;
+    padding: 0;
+    margin: 0;
+}
+.course-lession-content {
+    margin-top: -2px;
+    width: 266px;
+    height: 107px;
+    padding: 16px;
+    background-color: #c82f35;
+    color: #fff;
+}
+.course-lession-header {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.course-lession-time {
+    margin-top: 12px;
+}
+
+.course-time-icon {
+    font-size: 12px;
+}
+.course-lession-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-left: 8px;
+}
+/* nút chuyển phần khóa học */
+.course-lession-btn {
+    position: absolute;
+    left: 46.1%;
+    bottom: 24px;
+}
+
+.course-btn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    background-color: transparent;
+}
+
+.course-btn-icon {
+    padding: 5px 15px;
+    font-size: 18px;
+    color: #777;
+}
+
+.course-btn-icon:hover {
+    color: #444;
+    cursor: pointer;
+}
+/* phần déign */
+.design, .advanced, .other {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+/* animation cho phần khoá học */
+.course-body.sangtrai {
+    animation: trans_to_left 0.6s ease-in-out forwards;
+}
+.course-body.phaidivao {
+    animation: phaidivao 0.6s ease-in-out forwards;
+}
+.course-body.sangphai {
+    animation: trans_to_right 0.6s ease-in-out forwards;
+}
+.course-body.traidivao {
+    animation: traidivao 0.6s ease-in-out forwards;
+}
+@keyframes hide {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.lession .hid {
+    animation: hide 0.1s ease-in-out forwards;
+}
+@keyframes unhide {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.lession .unhide {
+    animation: unhide 0.2s ease-in-out forwards;
+}
+/* Phần tin tức */
+.news {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 741px;
+    margin: 30px 0;
+    background-color: #c82f35;
+    position: relative;
+    justify-content: center;
+}
+.news h1 {
+    color: #ffff !important;
+}
+/* .news .highlight_left,
+.news .highlight_right {
+    position: relative;
+    width: 192px;
+    height: 741px;
+} */
+.highlight_left img {
+    position: absolute;
+    bottom: 60px;
+    left: 16px;
+}
+.highlight_right img {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+}
+.news_main {
+    width: 1128px;
+    margin-top: 30px;
+}
+.list_news {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.left_news {
+    width: 50%;
+    padding: 24px 20px 0 20px;
+}
+.left_news img {
+    width:100%;
+    height:380px;
+    border-radius: 8px;
+}
+.left_news a {
+    text-decoration: none;
+}
+.left_news h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    margin: 16px 0;
+    line-height: 1.7;
+}
+.left_news h2:hover {
+    opacity: 0.8;
+}
+.left_news p {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin: 16px 0;
+}
+.right_news {
+    width: 50%;
+    padding: 0 8px;
+}
+._1news {
+    width: 100%;
+    padding: 24px 8px 0 8px;
+}
+._1news a {
+    width: 100%;
+    height: 108px;
+    display: flex;
+    text-decoration: none;
+}
+.img_news {
+    width: 157px;
+    height: 108px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+.header_news {
+    width: 100%;
+    color: #fff;
+}
+.header_news h3 {
+    color: #fff;
+    font-size: 1.7rem;
+    margin: 16px 0;
+    line-height: 2.2rem;
+}
+.header_news h3:hover {
+    opacity: 0.8;
+}
+.text_time {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin: 16px 0;
+}
+.more_btn {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #fff;
+    padding: 15px 25px;
+    justify-content: center;
+}
+.more_btn:hover {
+    opacity: 0.8;
+}
+/* Phần lịch khai giảng */
+.item_course {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: center;
+}
+/* .item_course aside {
+    width: 192px;
+    position: relative;
+} */
+.item_course .course {
+    width: 1128px;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+}
+.item_course .lession {
+    position: relative;
+    height: auto !important;
+    width: 1128px;
+}
+.list_lession:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1388px !important;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+}
+.list_lession {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 725px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+}
+.schedule_lession {
+    width: 100%;
+    height: 1388px;
+    position: relative;
+    display: flex;
+}
+._1lession {
+    display: flex;
+    height: 150px;
+    margin: 8px 12px;
+    align-items: center;
+    border: 1px solid #b9b9b9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px #e2e2e2;
+}
+.schedule {
+    align-items: center;
+    width: 360px;
+    height: 150px;
+    display: flex;
+    background-color: #c82f35;
+}
+.schedule_item {
+    text-align: center;
+    flex: auto;
+    color: #fff;
+}
+.schedule_item p {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+}
+.schedule_item span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 3rem;
+}
+.block_title {
+    width: 560px;
+}
+.block_title a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+.block_title p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.8;
+}
+.block_img {
+    width: 130px;
+    height: 133px;
+    padding: 30px;
+}
+.more_lession_btn {
+    color: #c82f35;
+    font-size: 1.6rem;
+    padding: 25px 15px;
+    text-align: center;
+}
+.list_lession.hide {
+    animation: hide 0.1s ease-in-out forwards;
+}
+.list_lession.unhide {
+    animation: unhide 0.2s ease-in-out forwards;
+}
+/* Phần feedback */
+.feedback {
+    width: 100%;
+    display: flex;
+    margin: 30px 0;
+    position: relative;
+    justify-content: center;
+}
+/* .feedback .highlight_left,
+.feedback .highlight_right {
+    position: relative;
+    width: 192px;
+} */
+.highlight_left img {
+    position: absolute;
+    bottom: 60px;
+    left: 16px;
+}
+.highlight_right img {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+}
+.feedback_main {
+    padding: 48px 200px;
+    width: 1128px;
+    background-color: #c82f35;
+    border-radius: 16px;
+}
+.feedback_main h1 {
+    color: #fff;
+}
+.feedback_content {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin-top: 24px;
+}
+._1content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    opacity: 0;
+    visibility: hidden;
+}
+.content {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+.student {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+.student img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+.student h4 {
+    line-height: 2rem;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.feedback_content ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.feedback_content ul li {
+    list-style: none;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 6px;
+    background: #d9d9d9;
+    opacity: 0.5;
+    text-indent: -999px;
+    transition: 0.4s;
+}
+
+.feedback_content ul .here {
+    background: #fc8e27 !important;
+}
+.feedback_content ul li:hover {
+    cursor: pointer;
+}
+._1content.hide {
+    animation: hide 0.1s ease-in-out forwards;
+}
+._1content.unhide {
+    animation: unhide 0.2s ease-in-out forwards;
+}
+/* Phần parter */
+.partner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 60px auto;
+    background: linear-gradient(180deg,#f1f5f6 0,#fff 43.72%);
+    text-align: center;
+}
+.partner h1 {
+    margin: 30px auto;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+.company_image img {
+    width: auto;
+    height: 30px;
+    margin: 20px;
+}
+/* Phần footer */
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    background-color: #c82f35;
+    background-image: url(./image/bg-footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -200px top;
+}
+.foot_main {
+    width: 1028px;
+    display: flex;
+    margin: 60px auto;
+}
+.foot_left {
+    width: 50%;
+    margin-left: 12px;
+    color: #fff;
+}
+.foot_left img {
+    width: auto;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.conect {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    margin: 10px auto;
+}
+.conect a {
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 10px;
+}
+.foot_left p {
+    font-size: 1.4rem;
+    margin: 4px auto;
+}
+.foot_right {
+    width: 50%;
+    padding-left: 60px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.address, .phone, .contact {
+    font-size: 1.4rem;
+    display: flex;
+    margin: 8px 0;
+    align-items: center;
+}
+.foot_right a {
+    text-decoration: none;
+    color: #fff;
+}
+.foot_right i {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+/* phần RWD */
+@media screen and (max-width: 1200px) { 
+    header #nav_menu ul li {
+        font-size: 1.1rem;
+        margin: auto 3px;
+    }
+}
+@media screen and (max-width: 980px) {
+    #mobile_menu {
+        display: block !important;
+    }
+    #nav_menu {
+        display: none !important;
+    }
+    .highlight_left,
+    .highlight_right {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .banner img {
+        height: 400px;
+    }
+    .slide_image {
+        height: 400px;
+    }
+    .banner {
+        height: 400px;
+    }
+    .list_course {
+        height: 1020px;
+    }
+    .course {
+        height: 100%;
+    }
+    .list_course .lession {
+        width: 100%;
+        height: 100%;
+    }
+    .list_course .develop {
+        width: 100%;
+        height: 100%;
+    }
+    .list_course .design,
+    .list_course .advanced,
+    .list_course .other {
+        width: 100%;
+        flex-wrap: wrap;
+    } 
+    .list_course .course-body {
+        flex-wrap: wrap;
+    }
+    .news {
+        height: 1250px;
+    }
+    .left_news, .right_news {
+        width: 100%;
+    }
+    ._1lession {
+        flex-wrap: wrap;
+    }
+    .schedule {
+        width: 100%;
+        height: 40%;
+    }
+    .block_title, 
+    ._1lession a {
+        height: 60%;
+        display: flex;
+        align-items: center;
+    }
+    .block_title {
+        width: 60%;
+    }
+    .feedback_main {
+        width: 100%;
+        padding: 48px 20px;
+    }
+    footer {
+        height: 400px;
+    }
+    .foot_main {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .foot_left {
+        width: 100%;
+    }
+    .foot_right {
+        width: 100%;
+        padding-left: 12px;
+    }
+    .address {
+        line-height: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .list_course {
+        height: 1850px;
+    }
+}
